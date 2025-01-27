@@ -1,0 +1,169 @@
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+
+.card {
+  width: 400px;
+  height: 400px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  padding: 15px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  transition: border-radius 2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+ }
+ 
+ .shadow {
+  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
+              0 0  0 2px rgb(190, 190, 190),
+              0.3em 0.3em 1em rgba(0,0,0,0.3);
+ }
+ .card div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+ }
+
+ .container {
+  perspective: 1500px;
+} 
+.btnCalculate {
+  padding: 17px 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(56, 255, 106);
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: rgb(46, 201, 80) 0px 10px 0px 0px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.btnCalculate:hover {
+  box-shadow: rgb(46, 201, 80) 0px 7px 0px 0px;
+}
+
+.btnCalculate:active {
+  background-color: rgb(56, 255, 106);
+  box-shadow: rgb(56, 255, 106) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+ 
+.btnReset {
+  padding: 17px 40px;
+  border-radius: 10px;
+  border: 0;
+  background-color: rgb(255, 56, 86);
+  letter-spacing: 1.5px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  box-shadow: rgb(201, 46, 70) 0px 10px 0px 0px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.btnReset:hover {
+  box-shadow: rgb(201, 46, 70) 0px 7px 0px 0px;
+}
+
+.btnReset:active {
+  background-color: rgb(255, 56, 86);
+  box-shadow: rgb(201, 46, 70) 0px 0px 0px 0px;
+  transform: translateY(5px);
+  transition: 200ms;
+}
+
+.input {
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  padding: 1em;
+  background-color: #ccc;
+  box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
+  transition: 300ms ease-in-out;
+}
+
+.input:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+             -13px -13px 100px #ffffff;
+}
+
+.neon-text {
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  animation: neonGlow 2s ease-in-out infinite, pulse 2s ease-in-out infinite;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 75px #00ff00;
+  transform-style: preserve-3d;
+}
+
+@keyframes neonGlow {
+  0% {
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 75px #00ff00;
+  }
+  50% {
+      text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 75px #00ff00, 0 0 100px #00ff00;
+  }
+  100% {
+      text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00, 0 0 75px #00ff00;
+  }
+}
+
+@keyframes pulse {
+  0% {
+      transform: rotateY(0deg);
+  }
+  25% {
+      transform: rotateY(10deg);
+  }
+  50% {
+      transform: rotateY(30deg);
+  }
+  75% {
+      transform: rotateY(10deg);
+  }
+  100% {
+      transform: rotateY(0deg);
+  }
+}
+
+ p {
+  font-size: large;
+  font-weight: bold;
+ }
+ .container{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: colorChange 10s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+      background-color: #ff7f7f;
+  }
+  25% {
+      background-color: #ffbf7f;
+  }
+  50% {
+      background-color: #7fff7f;
+  }
+  75% {
+      background-color: #7fbfff;
+  }
+  100% {
+      background-color: #ff7f7f;
+  }
+}
+ 

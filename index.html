@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tip Calculator</title>
+  <link rel="shortcut icon" href="./media/icon.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <div>
+      <h1 class="neon-text">Tip Calculator</h1>
+      <div class="card shadow">
+        <label for="billAmount">Bill Amount in Rupees:</label>
+        <input type="number" class="input" id="billAmount" placeholder="Enter Bill Amount">
+        <label for="tipPercentage">Tip Percentage:</label>
+        <input type="number" class="input" id="tipPercentage" placeholder="Enter Tip Percentage">
+        <br>
+        <div>
+          <button class="btnCalculate" onclick="calculateTip()">Calculate</button>
+          <button class="btnReset" onclick="reset()">Reset</button>
+        </div>
+        <br>
+        <p>Total Amount to Pay(Including Tip): <space><span id="result"></span>₹</p>
+        <p>Tip Amount: <space> <span id="tip"></span>₹</p>
+    </div>
+  </div>
+  <script>
+    let billAndTip=0;
+    let tipped=0;
+    let temp=0;
+    function calculateTip(){
+      if(billAmount.value&&tipPercentage.value){
+          temp=parseFloat(billAmount.value);
+          tipped=parseFloat((temp*tipPercentage.value)/100);
+          billAndTip=tipped+temp;
+          result.innerHTML=billAndTip;
+          tip.innerHTML = tipped;
+      }
+      else{
+        alert('enter both bill amount and tip percentage');
+      }
+    }
+    function reset(){
+      billAmount.value = null;
+      tipPercentage.value = null;
+      result.innerHTML = 0;
+      tip.innerHTML = 0;
+    }
+  </script>
+</body>
+</html>
